@@ -323,12 +323,6 @@ endif
 ifeq ($(BUILD_ID), GINGERBREAD)
     TW_NO_EXFAT := true
 endif
-ifneq ($(TW_NO_EXFAT), true)
-    include $(commands_recovery_local_path)/exfat/exfat-fuse/Android.mk \
-            $(commands_recovery_local_path)/exfat/mkfs/Android.mk \
-            $(commands_recovery_local_path)/fuse/Android.mk \
-            $(commands_recovery_local_path)/exfat/libexfat/Android.mk
-endif
 ifeq ($(TW_INCLUDE_CRYPTO), true)
     include $(commands_recovery_local_path)/crypto/ics/Android.mk
 endif
